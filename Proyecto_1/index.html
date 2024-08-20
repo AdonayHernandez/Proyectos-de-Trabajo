@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Playa Brillante</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px; /* Ajusta el ancho máximo según tus necesidades */
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: #00aaff;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        nav {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffaa00;
+        }
+
+        .reserva-btn {
+            background-color: #ffaa00;
+            border: none;
+            color: white;
+            padding: 10px 25px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .reserva-btn:hover {
+            background-color: #e68a00;
+        }
+
+        .hero {
+            background-image: url('playa.jpg');
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 120px 20px;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+        }
+
+        section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #00aaff;
+        }
+
+        .menu-item, .carousel img {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-item {
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .carousel img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        form label {
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        form input, form textarea, form button {
+            margin-bottom: 15px;
+            width: 100%;
+            max-width: 400px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        form button {
+            background-color: #ffaa00;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        form button:hover {
+            background-color: #e68a00;
+        }
+
+        footer {
+            background-color: #00aaff;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .hero {
+                padding: 80px 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 24px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            .reserva-btn {
+                width: 100%;
+                padding: 15px;
+                font-size: 18px;
+            }
+
+            form button {
+                padding: 10px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Restaurante Playa Brillante</div>
+            <nav>
+                <a href="#inicio">Inicio</a>
+                <a href="#menu">Menú</a>
+                <a href="#galeria">Galería</a>
+                <a href="#reservas">Reservas</a>
+                <a href="#contacto">Contáctanos</a>
+            </nav>
+            <button class="reserva-btn">Reserva Ahora</button>
+        </header>
+
+        <section id="inicio">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1>Bienvenidos a Playa Brillante</h1>
+                    <p>Donde la experiencia culinaria y la belleza de la playa se encuentran.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu">
+            <h2>Menú</h2>
+            <div class="menu-item">
+                <img src="/3.jpg" alt="Plato Especial">
+                <h3>Plato Especial</h3>
+                <p>Descripción del plato.</p>
+                <p>$20.00</p>
+            </div>
+            <!-- Añadir más platos -->
+        </section>
+
+        <section id="galeria">
+            <h2>Galería</h2>
+            <div class="carousel">
+                <img src="/1.jpg" alt="Playa">
+                <img src="/2.jpg" alt="Restaurante">
+                <!-- Añadir más imágenes -->
+            </div>
+        </section>
+
+        <section id="reservas">
+            <h2>Reservas</h2>
+            <form id="reserva-form">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="personas">Número de personas:</label>
+                <input type="number" id="personas" name="personas" required>
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required>
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" name="hora" required>
+                <button type="submit">Confirmar Reserva</button>
+            </form>
+        </section>
+
+        <section id="contacto">
+            <h2>Contáctanos</h2>
+            <p>Dirección: Calle de la Playa, 123</p>
+            <p>Teléfono: (123) 456-7890</p>
+            <div id="mapa">Mapa aquí</div>
+            <form id="contacto-form">
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Restaurante Playa Brillante</p>
+            <p><a href="#">Política de privacidad</a> | <a href="#">Términos de servicio</a></p>
+        </footer>
+    </div>
+
+    <script>
+      // Manejo del evento de envío para el formulario de reservas
+      document.getElementById('reserva-form').addEventListener('submit', function(event) {
+          event.preventDefault(); // Evita el envío del formulario
+          alert('¡Reserva confirmada!'); // Muestra un mensaje de alerta
+      });
+  
+      // Manejo del evento de envío para el formulario de contacto
+      document.getElementById('contacto-form').addEventListener('submit', function(event) {
+          event.preventDefault(); // Evita el envío del formulario
+          alert('Mensaje enviado. ¡Gracias por contactarnos!'); // Muestra un mensaje de alerta
+      });
+  </script>
+  
